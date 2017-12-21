@@ -1,0 +1,47 @@
+Țeculescu Octavian-Alexandru 325CD
+================================================================
+
+			Descrierea abordarii pe scurt:
+				
+	Ideea generala a codului este orientarea pe functionalitatea
+diverselor Design Patterns cerute in enuntul temei pentru a
+obtine imaginile dorite din fisierele de input primite.
+	Un detaliu semnificativ este impartirea taskurilor presupuse
+de aceasta cerinta pe mai multe nivele, atribuite diferitor
+clase, fie ele utilitare, de control sau pentru stocarea
+datelor despre o forma anume.
+	Se foloseste Factory & Singleton pentru generarea acestor
+clasede stocare conform datelor din fisierele de input, apoi
+acestea accepta visita Visitorului care preia datoria de a
+le reprezenta grafic adecvat.
+
+================================================================
+
+			Descrierea implementarii bonusului:
+			
+	Intrarea in program o reprezinta clasa Main, care apoi
+cedeaza controlul clasei Handler, ce executa taskurile de
+initializare si generare al outputului dorit. Handler este
+potrivit peste functionalitatea claselor Facton (Factory +
+Singleton) care genereaza instante ale formelor cerute cu
+atributele dorite si Painter care transpune in mediu grafic
+aceste forme cu atributele lor, obtinute in urma visitarii lor.
+
+================================================================
+
+			Mentionez urmatoarele aspecte:
+			
+	> Clasa Handler este controlulde nivel cel mai inalt;
+	
+	> In clasa Main se realizeaza doar intrarea in program;
+	
+	> Initializarea claselor reprezentative pentru fiecare
+	forma este facuta pe baza Stringului din fisier cu numele
+	lor, interpretat in clasa cu rol de Factory;
+	
+	> Clasa Painter contine majoritatea metodelor de detaliu
+	grafic, exceptand citirea culorilor si colorarea unui pixel
+	pe o suprafata.
+	
+================================================================
+												30 Octombrie 2017
